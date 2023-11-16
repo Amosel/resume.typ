@@ -1,17 +1,5 @@
 #import "utils.typ"
 
-// Load CV Data from YAML
-//#let info = yaml("cv.typ.yml")
-
-// Variables
-//#let headingfont = "Linux Libertine" // Set font for headings
-//#let bodyfont = "Linux Libertine"   // Set font for body
-//#let fontsize = 10pt // 10pt, 11pt, 12pt
-//#let linespacing = 6pt
-
-//#let showAddress = true // true/false Show address in contact info
-//#let showNumber = true  // true/false Show phone number in contact info
-
 // set rules
 #let setrules(uservars, doc) = {
     set page(
@@ -62,14 +50,13 @@
 }
 
 // Set Page Layout
-#let cvinit(doc) = {
+#let resumeinit(doc) = {
     doc = setrules(doc)
     doc = showrules(doc)
 
     doc
 }
 
-// Address
 #let addresstext(info, uservars) = {
     if uservars.showAddress {
         block(width: 100%)[
@@ -113,7 +100,7 @@
 ]
 
 // Create layout of the title + contact info
-#let cvheading(info, uservars) = {
+#let heading(info, uservars) = {
     align(center)[
         = #info.personal.name
         #addresstext(info, uservars)
@@ -123,7 +110,7 @@
 }
 
 // Education
-#let cveducation(info) = {
+#let education(info) = {
     if info.education != none {block(breakable: false)[
         == Education
         #for edu in info.education {
@@ -141,7 +128,9 @@
                 // Line 2: Degree and Date Range
                 #text(style: "italic")[#edu.studyType in #edu.area] #h(1fr)
                 #start #sym.dash.en #end
-                - *Honors*: #edu.honors.join(", ")
+                if #edu.honors != none {
+                    #edu.honors.join(", ")
+                }
                 - *Courses*: #edu.courses.join(", ")
                 #for hi in edu.highlights [- #eval("[" + hi + "]")]
             ]
@@ -150,8 +139,8 @@
 }
 
 // Work Experience
-#let cvwork(info) = {
-    if info.work != none {block(breakable: false)[
+#let work(info) = {
+    if info.work != none {block(breakable: true)[
         == Work Experience
 
         #for w in info.work {
@@ -171,16 +160,16 @@
                 #text(style: "italic")[#w.position] #h(1fr)
                 #start #sym.dash.en #end \
                 // Highlights or Description
-                #for hi in w.highlights [
-                    - #eval("[" + hi + "]")
-                ]
+                    #for hi in w.highlights [
+                        - #eval("[" + hi + "]")
+                    ]
             ]
         }
     ]}
 }
 
 // Leadership and Activities
-#let cvaffiliations(info) = {
+#let affiliations(info) = {
     if info.affiliations != none {block(breakable: false)[
         == Leadership & Activities
 
@@ -212,7 +201,7 @@
 }
 
 // Projects
-#let cvprojects(info) = {
+#let projects(info) = {
     if info.projects != none {block(breakable: false)[
         == Projects
 
@@ -241,7 +230,7 @@
 }
 
 // Honors and Awards
-#let cvawards(info) = {
+#let awards(info) = {
     if info.awards != none {block(breakable: false)[
         == Honors & Awards
 
@@ -272,7 +261,7 @@
 }
 
 // Certifications
-#let cvcertificates(info) = {
+#let certificates(info) = {
     if info.certificates != none {block(breakable: false)[
         == Licenses & Certifications
 
@@ -296,7 +285,7 @@
 }
 
 // Research & Publications
-#let cvpublications(info) = {
+#let publications(info) = {
     if info.publications != none {block(breakable: false)[
         == Research & Publications
 
@@ -320,7 +309,7 @@
 }
 
 // Skills, Languages, and Interests
-#let cvskills(info) = {
+#let skills(info) = {
     if (info.languages != none) or (info.skills != none) or (info.interests != none) {block(breakable: false)[
         == Skills, Languages, Interests
 
@@ -343,21 +332,19 @@
 }
 
 // References
-#let cvreferences(info) = {
+#let resumereferences(info) = {
     if info.references != none {block(breakable: false)[
         == References
 
         #for ref in info.references {
-            if ref.url != none [
-                - *#link(ref.url)[#ref.name]*: "#ref.reference"
-            ] else [
+            [
                 - *#ref.name*: "#ref.reference"
             ]
         }
     ]} else {}
 }
 
-// #cvreferences
+// #resumereferences
 
 // =====================================================================
 
@@ -372,20 +359,45 @@
     )
 }
 
-// #place(
-//     bottom + right,
-//     dy: -71%,
-//     dx: 4%,
-//     rotate(
-//         270deg,
-//         origin: right + horizon,
-//         block(width: 100%)[
-//             #set align(left)
-//             #set par(leading: 0.5em)
-//             #set text(size: 6pt)
 
-//             #super(sym.dagger) This document was last updated on #raw(datetime.today().display("[year]-[month]-[day]")) using #strike[LaTeX] #link("https://typst.app")[Typst].
-//             // Template by Je Sian Keith Herman.
-//         ]
-//     )
-// )
+#let uservars = (
+    headingfont: "Linux Libertine", // Set font for headings
+    bodyfont: "Linux Libertine",   // Set font for body
+    fontsize: 10pt, // 10pt, 11pt, 12pt
+    linespacing: 6pt,
+    showAddress: true, // true/false Show address in contact info
+    showNumber: true,  // true/false Show phone number in contact info
+)
+
+#let customrules(doc) = {
+    // Add custom document style rules here
+
+    doc
+}
+
+#let init(doc) = {
+    doc = setrules(uservars, doc)
+    doc = showrules(uservars, doc)
+    doc = customrules(doc)
+
+    doc
+}
+
+// Content
+#show: doc => init(doc)
+
+// Load Resume data from YAML
+#let resumedata = yaml("resume.yml")
+
+#heading(resumedata, uservars)
+#education(resumedata)
+#work(resumedata)
+#affiliations(resumedata)
+// #projects(resumedata)
+// #awards(resumedata)
+// #certificates(resumedata)
+// #publications(resumedata)
+#skills(resumedata)
+#resumereferences(resumedata)
+
+#endnote

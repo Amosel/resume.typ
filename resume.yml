@@ -1,0 +1,317 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Amosel/resume.typ/main/resume.typ.schema.json
+personal:
+  name: Amos Elmaliah
+  label: Fullstack and Native Software Developer
+  image: http://example.me/photo.jpg
+  email: example@gmail.com
+  phone: (123) 456-7890
+  url: http://example.me
+  summary: Versatile Software Developer with a 15-year track record proficient in Objective-C/Swift/iOS, React/Fullstack and Web3, focused currently on Rust and Cryptographic technologies like Zero-Knowledge Proofs (ZKP), Model-View-Controller (MVC), and Homomorphic Fully-Encrypted (HFE). Notable contributions to successful startups like YouNow, MediaBrix, and Beme, with my code impacting millions daily.
+  headline: Building decentralized internet for everyone
+  location:
+    address: 245 23rd st
+    postalCode: 11111
+    city: New York
+    region: New York
+    country: United States of America
+  competencies:
+    - Broad understanding in various stacks
+    - In-depth understanding of UX (User Experience) and DX (Developer Experience) principles
+      through progressive work experience
+    - Advocate for healthy and respectful workplace culture
+    - Systems thinking orientation, with a focus on the big picture
+    - Multidisciplinary and diverse range of interests and knowledge
+  profiles:
+    - network: Telegram
+      username: example
+      url: https://t.me/example
+    - network: Twitter
+      username: example
+      url: http://twitter.com/example
+    - network: Github
+      username: example
+      url: http://github.com/example
+    - network: Linkedin
+      username: example
+      url: http://linkedin.com/in/example
+work:
+  - organization: Holonym Foundation
+    location: US, Remote
+    description: Your Holo is your ZK Passport for Web3
+    position: Software Engineer
+    url: https://www.example.com
+    startDate: 2022-11-01
+    endDate: 2023-05-01
+    summary: Developed and integrated advanced cryptographic technologies and frameworks using RUST, TypeScript, and React.js, while mentoring a team in front-end app management and contributing to Node.js backend work.
+    highlights:
+      - Integrated Circom's witnesscalc and rapidsnark C++ libraries of groth16 prover
+        as a Expo module in a React-Native mobile app
+      - Integrated Zokrates's Rust ZK library prover as an Expo module in a React-Native mobile app
+      - Contributor to the Secure MPC EncriptionNetwork project code for client, server and nodes in RUST
+      - Onboarded team into RUST and TypeScript
+      - Constibute to fullstack project in Node.js and mentored team on advanced state in frontend apps
+      - Write RUST code for client, server and nodes, as well as some SGX work
+      - Constibute to Node.js backend work in Typescript
+  - organization: DaoStack
+    location: US, Remote
+    description: Building Collaborative Networks
+    position: Lead Software Developer
+    url: https://example.com
+    startDate: 2021-10-01
+    endDate: 2022-10-01
+    summary: Dev lead at commongood.it, also contributor in https://example.com and common.io
+    highlights:
+      - Fullstack web3 Solidity, assembly-script for subgraph, react, next.js and Ether.js
+      - Rearchitect firebase database for https://example.com
+      - Lead commongood.it dev team, a fundraising Dapp Similar to juicebox.money
+      - Helped with protocol architecture and design across the various projects
+  - organization: Cedar software Inc
+    position: Owner
+    startDate: 2014-08-31
+    endDate: Present
+    location: New York City
+    summary: Owner / Self Employed
+    url: https://example.me
+    highlights:
+      - Fullstack App Development and Consulting
+      - Involved in more than half a dozen major iOS apps such as Beme Inc, NYFW, a private
+        aviation company, The Orchard
+  - organization: Starbyt
+    position: CTO
+    startDate: 2018-01-31
+    endDate: 2020-06-30
+    highlights:
+      - Managed multiple native mobile and web projects for clients in Israel and in the
+        US.
+      - Built and lead an agile offshore development team of 7 developers using React,
+        React-Native and Node.JS
+      - Conducted research in music and digital signal processing (DSP) algorithms, Computer
+        Vision, and Machine Learning
+    url: https://www.linkedin.com/company/starbyt/
+    summary: Managed and Lead technology for multiple agency projects
+    location: Tel Aviv, Israel
+  - organization: MediaBrix/Receptiv
+    position: Lead Mobile
+    startDate: 2012-10-31
+    endDate: 2014-01-31
+    summary:
+      Paved the transaction from Adobe Flash Rich Media advertising to Hybrid
+      Mobile with new customer apps such as Beach Buggy Racing
+    highlights:
+      - Redesign a Javascript bridge based mobile SDK that shows video commecrcials
+      - Oversee and contribute to iOS, Android, Unity
+        and Phone Gap SDKs
+      - Extend SDK to expose MRAID (Mobile Rich Media Ad Interface Definitions)
+      - Integrate SDK with other Ad Networks such as Flurry and Burstly
+    url: https://www.linkedin.com/company/receptiv/
+    location: New York City
+  - organization: Rewind Me Inc
+    position: App Developer
+    startDate: 2012-05-31
+    endDate: 2012-09-30
+    highlights:
+      - Prototyped and built multi threaded high throughput I/O background download manger
+      - Optimization to iOS CoreData EDL, transaction chunk size and faulting.
+      - Creating thread safe hot cache for partial object representations
+    summary:
+      Build iOS app that provides a way for users to store and own their social
+      data
+    url: https://techcrunch.com/2012/06/14/rewind-me-lets-you-explore-your-digital-history-then-rewards-you-for-it/
+    location: New York City
+  - organization: Oddcast
+    position: Mobile Developer
+    startDate: 2010-06-30
+    endDate: 2011-06-30
+    summary: Prototyped, developed and shipped mobile Apps
+    highlights:
+      - Prototyped innovative mobile applications.
+      - Developed robust features for mobile apps.
+      - Successfully shipped mobile applications to app store.
+    url: https://www.linkedin.com/company/oddcast/
+    location: New York City
+  - organization: iFog
+    position: iPhone Developer
+    startDate: 2008-05-31
+    endDate: 2010-12-31
+    summary: Prototyped, developed and shipped record breaking mobile app
+    highlights:
+      - 250K appstore downloads in less than 3 months
+      - Reached 10 most downloaded apps in January 2009
+    url: https://www.youtube.com/watch?v=_LXDPEFWU5M
+    location: Tel Aviv, Israel
+  - organization: UIMUI
+    position: "Developer, Educator, Video Editor and Motion Design, Edited and post produced documentary films, commercials"
+    startDate: 2004-03-31
+    endDate: 2010-12-31
+    summary: iOS Development and Mentoring at IDC and Bezalel
+    highlights:
+      - Managed, developed and shipped mobile apps
+      - Serve as consultant on user experience and developing mobile products.
+        - Developed max/msp systems that synchronized and sequence sound synthesizers
+      - Developed experimental sound instruments using granular synthesis, FM synthesis
+      - Developed experimental video jockey tools for live video events
+
+    location: Tel Aviv, Israel
+    url: "example.me"
+education:
+  - institution: The Institute of Sonology
+    area: Computer Music
+    studyType: Sound synthesis, Algorithmic Composition
+    location: The Hague, Netherlands
+    startDate: 2001-09-01
+    endDate: 2002-06-01
+    url: http://sonology.org
+    highlights: []
+    score: 10
+    courses:
+      - Sound synthesis
+      - Algorithmic Composition
+      - psychoacoustics
+      - music psychology
+    honors: []
+  - institution: Hogeschool van Beeldende Kunsten, Muziek en Dans
+    area: Digital Communication and Media/Multimedia
+    location: The Hague, Netherlands
+    studyType: ArtScience
+    startDate: 2002-09-01
+    endDate: 2008-06-01
+    url: https://www.kabk.nl/en/programmes/bachelor/art-science
+    score: 6.5
+    highlights: []
+    courses: 
+      - Live Electronic Music
+      - software and hardware for digital signal processing and performance interfaces
+    honors: []
+affiliations:
+  - organization: Tech Stars
+    position: Software Developer
+    location: NYC, USA
+    url: https://www.techstars.com/accelerators/nyc
+    area: New York City
+    startDate: 2012-05-31
+    endDate: 2012-09-30
+    highlights: []
+  - organization: DCTV
+    position: Instructor, Editor
+    location: New York City
+    startDate: 2008-02-28
+    endDate: 2008-06-30
+    highlights:
+      - Conducted Final Cut workshops
+      - Led sessions on Motion
+      - Taught workshops in Color
+      - Facilitated Soundtrack workshops
+      - Delivered After Effect tutorials
+    url: https://www.dctvny.org
+  - organization: Bezelel Academy of Art and Design Jerusalem
+    position: Mentor at Interactive Media Department
+    location: Jeruslame, Israel
+    startDate: 2009-12-01
+    endDate: 2011-06-30
+    highlights: []
+    url: https://www.bezalel.ac.il/en
+  - organization: Bezelel Academy of Art and Design Jerusalem
+    position: Mentor at Media Innovation Lab
+    location: Hertzelia, Israel
+    startDate: 2009-12-01
+    endDate: 2011-06-30
+    highlights: []
+    url: https://www.runi.ac.il/en/research-institutes/communication/milab/
+awards: []
+certificates: []
+publications: []
+projects:
+  - name: "Job Tailor"
+    url: https://example.com/
+    affiliation: Open University
+    startDate: 2020-11-01
+    endDate: 2021-04-30
+    highlights:
+      - Created an AI-powered resume editor application that allowed users to easily create different resumes and cover letters specifically tailored to and customized for individual job descriptions based on their personal information in their complete curriculum vitae.
+      - Acquired more than 100,000 user sign ups in 3 months and more than 10,000 active monthly users in its lifetime before being sold to investors.
+      - Generated profit of upwards \$20,000 yearly with a team of only four developers and three business operatives
+
+skills:
+  - skills:
+      - "Zokrates"
+      - "Circom"
+    category: Zero-Knowledge
+  - skills:
+      - Solidity
+      - TheGraph
+      - Foundry
+      - Hardhat
+      - Ethers.js
+      - viem/wagmi
+    level: Advanced
+    category: Web3
+  - skills:
+      - Node
+      - React,
+      - GraphQL
+      - Mobx
+      - Redux
+      - Next.js
+      - Apollo
+      - AWS/Firebase/G-Cloud
+    level: Senior
+    category: Fullstack
+  - skills:
+      - React Native
+      - iOS
+      - Android
+      - Fastlane
+    level: Senior
+    category: Mobile
+  - skills:
+      - Rust
+      - Typescript/JavaScript
+      - Swift
+      - ObjectiveC
+      - C++
+      - Java
+    category: Computer Languages
+languages:
+  - fluency: Full Professional
+    language: English
+  - fluency: Native Speaker
+    language: Hebrew
+  - fluency: Elementary
+    language: Dutch
+  - fluency: Elementary
+    language: German
+
+interests:
+  - Spirituality
+  - Yoga
+  - Jazz Guitar
+  - Interactive Art
+  - Cooking
+
+references:
+  - name: Gilad Haimov
+    reference:
+      had the privilege of working with Amos on developing a complex crypto-investments
+      blockchain project. Amos has an exceptional technological skills, and his ability
+      to learn on the job, navigate new knowledge domains, as well as lead and manage
+      were felt and appreciated by all. He is smart, proactive, result oriented and
+      responsible and a great asset to any company.
+  - name: Ric Neil
+    reference:
+      Amos and I worked together at Mediabrix. He created the SDK that I had
+      game teams integrate. There are many types of engineers that can do this work,
+      but Amos is the best, because his work is like art. His attention to detail and
+      determination to make things perfect only made my job easier. He is one of the
+      rare engineers that I have worked with that works with you in the trenches to
+      deliver the right thing at the right time, right now. Not only that but he is
+      also a great dinner companion and has such a passion for life and friendship it
+      makes you glad to be on the planet with him.
+  - name: Sai Kong
+    reference: EXPERT mobile developer. Recommended.
+  - name: Hila Dar
+    reference:
+      Amos is sharp, dedicated, professional and great with getting things
+      done. My students find his ideas fresh and inspiring, admire his knowledge and
+      experience and produce great value from his simple and practical solutions. Although
+      having no formal Computer Engineering education, his teaching defiantly show his
+      hard gained garage crafts.
